@@ -1,0 +1,23 @@
+from ollama chat
+bad="Tell me about cats."
+good = "list 3 cat breads that are suitable for a penthouse.2lines about each."
+response B = chat(
+    mode = "llama3.2",
+    message=[
+        {
+            "role" : "user",
+            "content" : bad
+        }
+    ]
+)
+responseG = chat(
+    model = "llama3.2",
+    message =[
+        {
+            "role": "user"
+            "content" :good        }
+    ]
+)
+print("Bad prompt result:(responseB.message.content)")
+print()
+print("Good prompt result:(respond .message.content)")
